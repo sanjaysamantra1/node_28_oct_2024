@@ -1,0 +1,42 @@
+Softwares to be installed 
+=========================
+1. Nodejs
+  https://nodejs.org/en/download/prebuilt-installer
+
+2. vs code 
+   https://code.visualstudio.com/download
+
+
+Nodejs
+======
+Nodejs - FrontEnd Development - platform/Runtime Environment/server   (Nodejs Software)  
+Nodejs - BackeEnd Development - Programming Language - fs , os , HTTP, url , crypto
+
+
+How to Run Javascript code
+==========================
+1. Javascript on Browser (FrontEnd)
+  a. create a javascript file and add some code
+  b. create an HTML file and include that javascript 
+     <script src='abc.js' />
+  c. run the HTML, along with HTML , javascript code gets executed
+     (vscode extensions - liveserver , open in browser(alt+b))
+   
+
+2. Javascript on NodeJS
+   a. create a javascript file and add some code
+   b. make sure nodejs is installed
+   c. run the javascript using nodejs
+      node demo_1.js
+
+
+        Browser                       Nodejs
+=======================================================================
+1. document-yes                     1. document-no
+2. window-yes                       2. window-no
+3. offline-storage-yes              3. offline storage-no
+4. cookie-yes                       4. cookie-yes
+
+5. file system-no                   5. file system-yes
+6. Database Interaction-No          6. Database Interaction-yes
+7. User Interface,Consume APIs      7. API development
