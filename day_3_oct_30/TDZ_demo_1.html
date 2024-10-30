@@ -1,0 +1,18 @@
+<script>
+    console.log('a : ', a);   // undefined
+    // accessing var type variables before initilization - Yes
+    var a = 10;
+    console.log('a : ', a);  // 10
+
+    // console.log('b : ', b); // Uncaught ReferenceError: Cannot access 'b' before initialization
+    let b = 20;
+    console.log('b : ', b);
+
+    // console.log('c : ', c);
+    const c = 30;
+    console.log('c : ', c);
+
+    // javascript code gets executed in 2 steps
+    // 1. memory creation  (creates memory for all variables, assigns 'undefined' only for var)
+    // 2. code execution
+</script>

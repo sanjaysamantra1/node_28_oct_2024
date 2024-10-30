@@ -1,0 +1,85 @@
+Javascript : is a programming language, follows ECMASCRIPT standards
+ECMASCRIPT : is a standard, followed by javascript
+ECMA  : European computer menufecturer association
+
+<2015   ES-5
+2015    ES-6 (const,let,for-in,for-of,template,rest,spread,class,extends,module)
+2016    ES-7
+2017    es-8
+.....   ....
+2024    ES-15
+
+Variables
+=========
+-Variables are containers for storing data values. 
+ Variable is a name of memory location.
+-Variables in Javascript can be declared by using either one of the below 3 keywords:
+ 1. var   
+ 2. let
+ 3. const
+
+	var						let						 const
+======================================================================
+1.since begining		 1.ECMASCRIPT-6(2015)		1.ECMASCRIPT-6(2015)
+2.value can be changed   2.value can be changed     2.cann't be changed
+3.initialization is		 3.initialization is		3.mandatory
+	not mandatory           not mandatory	
+4.can be redeclared		 4.cann't be redeclared		4.cann't be redeclared
+5.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
+6.function/global		 6.block/function/global	6.block/function/global
+
+N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before initialization.
+-let/const variables are not reachable/usable before initialization (Temporal Dead Zone)
+
+	
+Hoisting:
+=========
+-The process of assigning variable declarations a default value of 'undefined' during the creation phase is called Hoisting.
+-In hoisting, the variable and function declarations are put into memory during the	compile/creation phase before code execution phase.
+
+
+
+Temporal Dead Zone
+==================
+-The period between entering scope and being initialized where they cannot be accessed. 
+ This period is the temporal dead zone (TDZ).
+-The state where variables are un-reachable. They are in memory, but they aren't usable.
+-The let and const variables exist in the TDZ from the start of their enclosing scope until they are initialized.
+-if a let/const variable is accessed before its initialization, it would throw a ReferenceError. Because of the TDZ.
+
+
+
+What’s the difference between context and scope?
+=============================================== 
+-The context is (roughly) the object that calls the function. 
+-And the scope is all the variables visible to a function where it is defined. 
+-One cares about how it is called, the other cares about how it is defined.
+
+
+
+variable scope: 
+==============
+-Scope is a certain section/region of the program where a defined variable can have its existence and can be recognized, beyond that it can’t be accessed.
+-Scope determines the visibility and accessibility of a variable.
+-Every variable will have either 1 of the below 3 scopes.
+	1. global
+	2. function/Local
+	3. block
+	
+global scope:
+--------------
+-variables declared outside function.
+-these are accesible/visible throughout the script by any function.
+
+function:
+--------
+-declared inside a function/function arguements.
+-can be used only inside that function.
+
+block scope:
+------------
+-declared inside a block(if,else,try,catch)
+-visible only inside a block
+
+N.P-Scope of the variables declared without var/let/const become global irrespective of 
+    where it is declared.
