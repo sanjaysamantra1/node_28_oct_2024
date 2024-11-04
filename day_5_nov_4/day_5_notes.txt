@@ -1,0 +1,37 @@
+Functions
+=========
+1. Pre-Defined 
+   console.log() , document.write() , window.alert() , Math.max() , Math.min()
+2. user-Defined
+   a. Function Declaration
+   b. Function Expression
+   c. Self Invoked / Immediately Invoked Function Expression
+   d. Arrow Function
+
+
+Declaration vs Expression
+=========================
+1. function declarations are named functions, function expressions are anonymous
+2. function declarations are hoisted , function expressions are not hoisted.
+
+
+SelfInvoked
+============
+-to invoke some logic only 1 during the page load
+-IIFEs cann't be invoked more than 1
+
+
+Arrow Function
+==============
+-ECMAScript 6 (2015)
+
+
+
+Arrow Function Limitations:
+==========================
+-Arrow functions shouldn't be used as Object methods, if arrow functions are declared as object methods, inside the function this = window / global
+-Arrow functions shouldn't be used where 'this' value has to be dynamic.
+
+
+Arrow Function Benefits:
+========================
