@@ -5,6 +5,7 @@ Scopes
 Functions
 Arrow Function
 this operator
+closure
 String
 Arrays
 fetch()

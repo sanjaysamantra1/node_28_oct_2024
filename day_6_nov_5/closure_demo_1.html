@@ -1,0 +1,21 @@
+<script>
+    var a = 10;
+    let b = 20;
+    // both a,b are global variables, 
+    // var type variables are part of global scope
+    // let type variables are part of script scope
+
+    function f1() {
+        let c = 30;
+        console.log('f1..', a, b, c)
+
+        function f2() {
+            let d = 40;
+            console.log('f2...', a, b, c, d);
+        }
+        f2();
+        console.dir(f2);
+    }
+    f1();
+    console.dir(f1);
+</script>

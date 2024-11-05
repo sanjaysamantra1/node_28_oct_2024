@@ -24,6 +24,7 @@ SelfInvoked
 Arrow Function
 ==============
 -ECMAScript 6 (2015)
+-arrow function doesn't have its own this binding & uses 'this' from lexical context(the place where the function is written)
 
 
 
@@ -35,3 +36,4 @@ Arrow Function Limitations:
 
 Arrow Function Benefits:
 ========================
+1. 

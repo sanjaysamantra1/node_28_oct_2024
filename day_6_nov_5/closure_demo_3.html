@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h1>Count value is::<span>0</span></h1>
+
+        <button onclick="increment()">Increment</button>
+        <button onclick="sayHi()">sayHi</button>
+    </body>
+
+    <script>
+        function initializeCounter(){
+            var count = 0;  // count is a closure scoped variable for inner function
+
+            function inner(){
+                count++;
+                document.querySelector('span').innerText = count;
+            }
+            return inner;
+        }
+        let increment = initializeCounter();
+        console.log(increment)
+        console.dir(increment)
+
+        
+        function sayHi(){
+           console.log('Hiiiiiiiii');
+           count++;
+           document.querySelector('span').innerText = count;
+        }
+    </script>
+</html>
