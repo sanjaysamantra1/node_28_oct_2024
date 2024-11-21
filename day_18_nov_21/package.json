@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "mocha": "^10.8.2"
   }
 }
