@@ -7,3 +7,4 @@ for(arg of args){
 }
 console.log(args);
 console.log(obj);
+console.log('hiii-2')

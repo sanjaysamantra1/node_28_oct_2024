@@ -1,0 +1,12 @@
+{
+  "name": "day_19_nov_22",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  },
+  "scripts": {
+    "myscript1" : "mkdir abc && cd abc && mkdir pqr"
+  }
+}
