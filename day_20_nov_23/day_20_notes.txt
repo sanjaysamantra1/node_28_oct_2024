@@ -1,0 +1,32 @@
+Node.js Global Objects
+======================
+-Node.js global objects are global in nature and available in all modules.
+-we don't have to import these objects in our application; they can be directly used.
+-A list of Node.js global objects are given below:
+	__dirname
+	__filename
+	console - log(),error(),warn(),time(),timeEnd(),trace(),dir(),assert(),table()
+	process - exit(),beforeExit(), uncaughtException()
+	buffer
+	setImmediate(callback[, arg][, ...])
+	setInterval(callback, delay[, arg][, ...])
+	setTimeout(callback, delay[, arg][, ...])
+	clearImmediate(immediateObject)
+	clearInterval(intervalObject)
+	clearTimeout(timeoutObject)
+	structuredClone()
+	atob()
+	btoa()
+	exports
+	require
+	fetch
+	global
+	globalThis
+	module
+	
+
+Note: 
+__dirname :  __dirname is not defined in ES module scope
+
+to use __dirname in ES modules, use the below code
+const __dirname = import.meta.dirname;

@@ -1,0 +1,14 @@
+<html>
+
+<body>
+    <h1></h1>
+    <script>
+        function calculateTime() {
+            let time = new Date().toLocaleTimeString();
+            document.querySelector('h1').innerHTML = time;
+        }
+        setInterval(calculateTime, 1000);
+    </script>
+</body>
+
+</html>
