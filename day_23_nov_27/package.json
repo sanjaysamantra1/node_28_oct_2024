@@ -1,0 +1,17 @@
+{
+  "name": "day_23_nov_27",
+  "version": "1.0.0",
+  "description": "",
+  "main": "join_resolve.js",
+  "scripts": {
+    "dev" : "node --env-file=.dev.env process_demo_2.js",
+    "qa" : "node --env-file=.qa.env process_demo_2.js",
+    "prod" : "node --env-file=.prod.env process_demo_2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
