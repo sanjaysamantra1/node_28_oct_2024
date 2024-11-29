@@ -1,0 +1,19 @@
+{
+  "employees": [
+    {
+      "id": "101",
+      "firstName": "kapil",
+      "lastName": "dev",
+      "sal": 7000,
+      "gender": "male"
+    },
+    {
+      "id": "102",
+      "sal": 4500,
+      "firstName": "sachin",
+      "lastName": "Tendulkar",
+      "gender": "male"
+    }
+  ],
+  "products": []
+}
