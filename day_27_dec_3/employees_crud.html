@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function fetchAllEmployees() {
+            let userResponse = await fetch('http://localhost:5000/employees');
+            let finalResponse = await userResponse.json();
+            console.log(finalResponse)
+        }
+        fetchAllEmployees();
+    </script>
+</body>
+
+</html>
