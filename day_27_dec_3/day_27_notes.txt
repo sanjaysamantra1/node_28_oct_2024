@@ -1,0 +1,28 @@
+An Express application can use the following types of middleware:
+1. Application-level middleware
+   app.use(logger)
+2. Router-level middleware
+   const userRouter = express.Router();
+   userRouter.use(logger);
+3. Error-handling middleware
+   Note : To manually trigger error handling middleware, you can pass an error object to the next() function
+   catch(err){
+	 next(err); // transfers error object to error handling middleware
+   }  try{
+   } 
+4. Built-in middleware
+    express.static()
+	express.json()        converts request body to JSON.     
+	express.urlencoded()  converts form-data to JSON
+5. Third-party middleware 
+   cors , body-parser, cookie-parser
+
+
+express.Router()
+================
+-express.Router() creates a new router object that can handle requests in a modular and organized way
+
+Modularity: Group routes based on features or functionality. (users, products,  orders)
+Scalability: Organize routes for large applications and separate them into different modules.
+Middleware Management: Apply middleware to specific routes or groups of routes easily.
+Cleaner Code: By dividing routes into smaller, focused files, our codebase remains clean and readable.

@@ -68,21 +68,3 @@ const logger = (req, res, next) => {
   next();
 }
 
-An Express application can use the following types of middleware:
-1. Application-level middleware
-   app.use(logger)
-2. Router-level middleware
-   const userRouter = express.Router();
-   userRouter.use(logger);
-3. Error-handling middleware
-   Note : To manually trigger error handling middleware, you can pass an error object to the next() function
-   try{
-   }catch(err){
-	 next(err); // transfers error object to error handling middleware
-   }   
-4. Built-in middleware
-    express.static()
-	express.json()        converts request body to JSON.     
-	express.urlencoded()  converts form-data to JSON
-5. Third-party middleware 
-   cors , body-parser, cookie-parser
