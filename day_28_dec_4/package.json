@@ -1,0 +1,21 @@
+{
+  "name": "day_28_dec_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cookie_parser_demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

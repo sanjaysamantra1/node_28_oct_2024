@@ -7,6 +7,7 @@ const myErrorHandler = require('./middlewares/errorhandler_middleware');
 const app = express();
 app.use(express.json()); // middleware
 app.use(cors()); // middleware
+app.use(express.static('public')) // middleware to serve static files
 // app.use(logger); // middleware
 
 app.use('/employees', employeeRouter);
