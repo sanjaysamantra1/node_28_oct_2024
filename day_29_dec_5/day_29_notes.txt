@@ -1,0 +1,97 @@
+Winston
+=======
+-winston is a logging library with support for multiple transports(console, file, datatbase)
+
+// Configure Winston logger
+const logger = winston.createLogger({
+  level: 'info', // Log level: 'error', 'warn', 'info', 'http', 'verbose', 'debug', 'silly'
+  format: winston.format.json(),
+  transports: [
+    new winston.transports.Console(), // Log to the console
+    new winston.transports.File({ filename: 'app.log' }) // Log to a file
+  ]
+});
+
+// Middleware to log each request
+app.use((req, res, next) => {
+  logger.info(`HTTP ${req.method} ${req.url}`);
+  next();
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  logger.error(`Error: ${err.message}`);
+  res.status(500).send('Something went wrong!');
+});
+
+
+
+
+
+Express generator
+=================
+1. npm install -g express-generator
+2. express project1 (--view=jade  default)
+   express --view=ejs project1
+   express project2 --no-view
+3. once the project is created, run the below commands to start the app
+	cd project1
+	npm install
+	SET DEBUG=project1:* & npm start
+
+
+Folder Structure for NodeJS & ExpressJS project
+================================================
+https://dev.to/mr_ali3n/folder-structure-for-nodejs-expressjs-project-435l
+
+
+
+CORS(Cross-Origin-Resource-Sharing)
+====
+-Manages how our server will respond to requests from different origins.
+-Controls which domains can access our API or web application by setting Access-Control-Allow-Origin and other headers.
+
+Key Features:
+-Prevents unauthorized cross-origin requests: 
+	By default, browsers block requests made from one domain to another (a different origin). The cors middleware enables specific domains or all domains to access your resources.
+-Customizable origin policies: 
+	We can whitelist specific origins, methods, and headers that are allowed to interact with your server.
+
+
+-CORS is a npm package.
+-How to Install
+ npm install cors
+ 
+ 
+How to use cors
+===============
+const cors = require('cors');
+const app = express();
+app.use(cors());
+
+const corsOptions = {
+  origin: 'http://example.com'
+}
+app.use(cors(corsOptions));
+
+
+Default Configuration 
+corsOptions = {
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
+
+const whitelist = ['http://example1.com', 'http://example2.com']
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+https://www.npmjs.com/package/cors

@@ -1,0 +1,6 @@
+{"level":"info","message":"HTTP GET /employees/1"}
+{"level":"info","message":"HTTP GET /employees"}
+{"level":"info","message":"HTTP GET /employees/aaa"}
+{"level":"info","message":"HTTP GET /employees/aaa"}
+{"level":"info","message":"HTTP GET /employees/aaa"}
+{"level":"error","message":"Error: Employee id should be a number"}
