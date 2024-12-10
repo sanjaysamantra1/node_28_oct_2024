@@ -1,0 +1,34 @@
+Aggregation Operations
+======================
+-Aggregation operations process multiple documents and return computed results
+-Used to: 
+	1. Group values from multiple documents together.
+	2. Perform operations on the grouped data to return a single result.
+	3. Analyze data changes over time.
+
+
+
+Aggregation Pipelines
+======================
+-An aggregation pipeline consists of one or more stages that process documents.
+-Each stage performs an operation on the input documents. For example, a stage can filter documents, group documents, and calculate values.
+-The documents that are output from a stage are passed to the next stage as input.
+-An aggregation pipeline can return results for groups of documents. For example, return the total, average, maximum, and minimum values.
+
+-db.collectionName.aggregate(pipeline, options)
+ input --> $match  --> $group --> $sort --> output
+
+$match, $group, $limit, $project, $sort, $addFields, $count, $lookup, $out , $unwind
+
+
+
+
+
+Assignment
+==========
+1. Find distinct salaries in asccending order.
+2. Find the 3rd highest salary in the employee table.
+3. Find the employees whose DOB is today's date.
+4. increase the salary of every employee by 500.
+5. change the 'gender' of every employee (male-->female,female-->male)
+5. add 'mr.' before the names of all male employees
