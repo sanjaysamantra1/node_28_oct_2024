@@ -1,0 +1,52 @@
+Assignment
+==========
+-Create URL shorten application, with the below 2 APIS 
+API-1 : should return short url code
+=====
+POST http://localhost:5000/api/shorten 
+{
+    "originalUrl" : "https://www.youtube.com/results?search_query=express+rate+limit"
+}
+
+
+API-2 : should redirect us to the original url
+=====
+GET http://localhost:5000/e32nODMkC<CODE>
+
+
+
+GraphQL
+=======
+-GraphQL is a query language for APIs.
+-GraphQL provides a complete and understandable description of the data in API.
+-It gives clients the power to ask for exactly what they need and nothing more.
+
+Advantages of GraphQL
+---------------------
+Efficient data retrieval : allows clients to specify exactly what data they need, reduces the amount of data transferred 
+Flexible query structure : Clients can control the structure and content of the data they receive
+Batch processing : allows clients to consolidate multiple queries into a single request,reduce latency and minimize the number of network requests
+Defines a data shape : server returns the response in a simple, secure, and predictable shape
+
+		REST          		 GraphQL
+=========================================
+1. Server Driven            1. Client Driven
+2. Slower                   2. faster
+3. Over-fetching 		    3. No over-fetching , under-fetching
+4. fileuploading-Yes	    4. File-uploading - No
+5. Simple, Resource driven  5. Micro Services   
+
+
+
+npm install graphql graphql-http ruru
+
+
+apollographql
+=============
+https://www.apollographql.com/docs
+
+-Apollo Server is an open-source, spec-compliant GraphQL server 
+-Apollo Server is compatible with any GraphQL client, including Apollo Client. 
+-To build a production-ready, self-documenting GraphQL API that can use data from any source.
+	
+npm i express  @apollo/server graphql mongoose

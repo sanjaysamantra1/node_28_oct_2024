@@ -1,0 +1,17 @@
+{
+  "name": "day_35_dec_12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.9.0",
+    "graphql-http": "^1.22.3",
+    "ruru": "^2.0.0-beta.17"
+  }
+}
