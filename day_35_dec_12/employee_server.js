@@ -1,19 +1,20 @@
 const express = require('express');
 const cors = require('cors');
-const { GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList, GraphQLInt, GraphQLNonNull } = require('graphql');
+const { GraphQLSchema, GraphQLObjectType, GraphQLString
+    , GraphQLList, GraphQLInt, GraphQLNonNull } = require('graphql');
 const { createHandler } = require('graphql-http/lib/use/express');
 const { ruruHTML } = require('ruru/server');
 
 const app = express()
 app.use(cors());
 
-// In-memory database
+// In-memory data
 const employees = [
     { id: 1, name: 'Sachin Tendulkar', sal: 5000, gender: 'male' },
     { id: 2, name: 'Kapil Dev', sal: 7000, gender: 'female' },
 ];
 
-// Employee Type Definition
+// Employee Type Definition (structure for the data)
 const EmployeeType = new GraphQLObjectType({
     name: 'Employee',
     fields: {
@@ -52,7 +53,7 @@ const Mutation = new GraphQLObjectType({
                 gender: { type: new GraphQLNonNull(GraphQLString) },
             },
             resolve: (_, { name, sal, gender }) => {
-                const newEmployee = { id: String(employees.length + 1), name, sal, gender };
+                const newEmployee = { id: employees.length + 1, name, sal, gender };
                 employees.push(newEmployee);
                 return newEmployee;
             },

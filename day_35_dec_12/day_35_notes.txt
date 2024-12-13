@@ -50,3 +50,32 @@ https://www.apollographql.com/docs
 -To build a production-ready, self-documenting GraphQL API that can use data from any source.
 	
 npm i express  @apollo/server graphql mongoose
+
+
+Graphql and graphql-http
+-------------------------
+1. create a project 
+   npm init -y
+2. install required packages
+   npm install graphql graphql-http ruru
+3. Create a GraphQL schema
+   // const schema = new GraphQLSchema({query,mutation});
+   
+   const schema = new GraphQLSchema({
+    query: new GraphQLObjectType({
+        name: 'Query',
+        fields: {
+            hello: {
+                type: GraphQLString,
+                resolve: () => 'Hello World !!',
+            },
+        },
+    }),
+ });
+4. Define a route and call createHandler(Schema)
+  app.all('/graphql', createHandler({ schema }));
+
+5. serve RURU UI
+   app.get('/', (req, res) => {
+     res.end(ruruHTML({ endPoint: '/graphql' }))
+   })
