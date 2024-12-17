@@ -29,8 +29,8 @@ Node.js Syllabus
 -Creating web server & Handling http requests (HTTP)
 -Express Framework-routes
 -NodeJS & MongoDB Connection
--Mongoose,graphQL
 -Template Engines (Jade/Pug, vash, EJS, handlebars)
+-Mongoose,graphQL
 -Redis (Caching)
 -ESLint 
 -Swagger  (API Documentation)
