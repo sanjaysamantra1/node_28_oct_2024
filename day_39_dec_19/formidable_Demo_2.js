@@ -1,10 +1,11 @@
-const express = require('express');
-const fs = require('fs');
-const { formidable } = require('formidable');
-const app = express();
+const express = require('express')
+const fs = require('fs')
+const path = require('path')
+const { formidable } = require('formidable')
+const app = express()
 app.get('/', (req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(`
+  res.writeHead(200, { 'Content-Type': 'text/html' })
+  res.end(`
       <h2>With Node.js <code>"http"</code> module</h2>
       <form action="/api/upload" enctype="multipart/form-data" method="post">
 
@@ -16,26 +17,26 @@ app.get('/', (req, res) => {
 
         <input type="submit" value="Upload" />
       </form>
-    `);
+    `)
 })
 app.post('/api/upload', async (req, res) => {
-    const form = formidable({});
-    let fields;
-    let files;
-    try {
-        [fields, files] = await form.parse(req);
-    } catch (err) {
-        res.end(String(err));
-        return;
-    }
-    for (let file of files.myFiles) {
-        let oldPath = file.filepath;
-        let newPath = `${__dirname}/assets/${file.originalFilename}`;
-        let imageFile = fs.readFileSync(oldPath);
-        fs.writeFileSync(newPath, imageFile);
-        res.end('Files Uploaded Succesfully!!!')
-    }
-});
+  const form = formidable({})
+  let files
+  try {
+    const formArr = await form.parse(req)
+    files = formArr[1]
+  } catch (err) {
+    res.end(String(err))
+    return
+  }
+  for (const file of files.myFiles) {
+    const oldPath = file.filepath
+    const newPath = path.join(__dirname, 'assets', file.originalFilename)
+    const imageFile = fs.readFileSync(oldPath)
+    fs.writeFileSync(newPath, imageFile)
+    res.end('Files Uploaded Succesfully!!!')
+  }
+})
 app.listen(5000, () => {
-    console.log(`Server Running at 5000 port`)
-});
+  console.log('Server Running at 5000 port')
+})
