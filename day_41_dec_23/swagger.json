@@ -1,0 +1,56 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Employee CRUD",
+        "version": "1"
+    },
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/employees": {
+            "get": {
+                "summary": "Get All Employees",
+                "description": "Fetches all the employees from DB",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful Operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Employee"
+                            }
+                        }
+                    },
+                    "400": {}
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Employee": {
+            "type": "object",
+            "properties": {
+                "eId": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "sal": {
+                    "type": "integer"
+                },
+                "gender": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
