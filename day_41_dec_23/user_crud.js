@@ -1,10 +1,13 @@
 const express = require("express");
+const fs = require("fs");
 const app = express();
 const port = 5000;
 
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+const customCss = fs.readFileSync('./styles.css')
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument,{customCss}));
 
 let users = [
   { id: 1, name: "sachin", sal: 5000, gender: "male" },
