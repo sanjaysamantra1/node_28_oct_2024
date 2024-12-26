@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 async function connectToDB() {
-    await mongoose.connect('mongodb://127.0.0.1/sept_2024');
+    await mongoose.connect('mongodb://127.0.0.1/oct_2024');
     console.log('Database connection established')
 }
 app.use('/employees', employeeRouter)
